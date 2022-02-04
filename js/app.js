@@ -1,6 +1,6 @@
 const API_KEY = `46ad7457603b9b0104e633e78cd60e16`;
 
-fetch("http://ip-api.com/json")
+fetch("https://api.db-ip.com/v2/free/self")
     .then(Response => Response.json())
     .then(data => { searchTemperature1(data);
   });
