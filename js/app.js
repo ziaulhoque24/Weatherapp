@@ -7,7 +7,7 @@ fetch("https://api.db-ip.com/v2/free/self")
 
 searchTemperature1 = (data) => {
 
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${data.city}&appid=${API_KEY}&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${data.stateProv}&appid=${API_KEY}&units=metric`;
 
     fetch(url)
         .then(res => res.json())
@@ -28,7 +28,7 @@ const setInnerText = (id, text) => {
 }
 
 const displayTemperature = temperature => {
-    setInnerText('stateProv', temperature.name);
+    setInnerText('city', temperature.name);
     setInnerText('temperature', temperature.main.temp);
     setInnerText('condition', temperature.weather[0].main);
     // set weather icon
