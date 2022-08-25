@@ -28,7 +28,7 @@ const setInnerText = (id, text) => {
 }
 
 const displayTemperature = temperature => {
-    setInnerText('city', temperature.name);
+    setInnerText('stateProv', temperature.name);
     setInnerText('temperature', temperature.main.temp);
     setInnerText('condition', temperature.weather[0].main);
     // set weather icon
